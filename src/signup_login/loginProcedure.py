@@ -1,12 +1,13 @@
-from chekIfPasswordCorr import checkIfPasswordCorr
+from checkIfPasswordCorr import checkIfPasswordCorr
 def loginProcedure():
-    login = input("What is your login: ")
-    password = input("What is your password: ")
+    run = True
+    while run:
+        login = input("What is your login: ")
+        password = input("What is your password: ")
 
-    passCorrect = checkIfPasswordCorr(login, password)
-    if passCorrect:
-        # TODO: What hapens if credentials are ok
-        pass
-    elif not passCorrect:
-        #TODO: What hapens if credentials are not ok
-        pass
+        passCorrect = checkIfPasswordCorr(login, password)
+        if passCorrect:
+            print("Correct login and password")
+            run = False
+        elif not passCorrect:
+            print("Login not correct")
