@@ -1,4 +1,4 @@
-from helpy import help
+from helpy import helpy
 def app():
     print("------- Hello welcome to Console Unet ------")
     print("For help enter help")
@@ -6,4 +6,4 @@ def app():
     while run:
         command = input("Enter command")
         if command == "help":
-            help()
+            helpy()
